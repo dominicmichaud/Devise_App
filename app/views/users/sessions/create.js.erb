@@ -1,0 +1,8 @@
+var ready;
+ready = function () {
+  $("#notice").html("<%= flash[:alert] %>");
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+$(document).on('turbolinks:render', ready);
